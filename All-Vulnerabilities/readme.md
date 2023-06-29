@@ -1,51 +1,52 @@
 # All Vulnerabilities 
 
-| Vulnerability                                      | Impact                                            | Severity Score |
-|----------------------------------------------------|---------------------------------------------------|----------------|
-| SQL Injection (SQLi)                              | Unauthorized data access, manipulation, or leakage | 9/10           |
-| Command Injection                                 | Execution of arbitrary commands on the server     | 8/10           |
-| Cross-site Scripting (XSS)                        | Execution of malicious scripts in users' browsers | 7/10           |
-| XML Injection (Xinjection or XXE)                  | Unauthorized access, SSRF, or denial of service   | 8/10           |
-| LDAP Injection                                    | Unauthorized access, leakage, or denial of service| 7/10           |
-| OS Command Injection                              | Execution of arbitrary operating system commands | 9/10           |
-| XPath Injection                                   | Unauthorized data access or manipulation          | 6/10           |
-| Template Injection                                | Execution of arbitrary code within templates      | 8/10           |
-| Code Injection                                    | Execution of arbitrary code within the application| 9/10           |
-| Expression Language (EL) Injection                | Execution of arbitrary expressions or code        | 7/10           |
-| Object-Relational Mapping (ORM) Injection         | Unauthorized data access, manipulation, or leakage| 8/10           |
-| NoSQL Injection                                   | Unauthorized data access, manipulation, or leakage| 7/10           |
-| JavaScript Injection                              | Execution of malicious JavaScript code            | 7/10           |
-| SMTP Injection                                    | Unauthorized email sending or manipulation        | 6/10           |
-| Remote Code Execution (RCE)                       | Execution of arbitrary code on the server         | 9/10           |
-| Server-Side Request Forgery (SSRF)                | Unauthorized requests to internal resources       | 7/10           |
-| HTTP Header Injection                             | Injection of malicious headers leading to attacks | 6/10           |
-| Cross-Site Request Forgery (CSRF) with Injection  | Unauthorized actions performed on behalf of users | 7/10           |
-| Cross-Site Flashing (XSF)                         | Injection of malicious Flash content              | 6/10           |
-| Out-of-Band (OOB) Injection                       | Data exfiltration or remote command execution     | 8/10           |
-| File Inclusion/Path Traversal                     | Unauthorized access to local or remote files      | 8/10           |
-| Server-Side Includes (SSI) Injection              | Execution of arbitrary code in server-side includes | 7/10          |
-| Shellshock                                        | Execution of arbitrary commands via Bash          | 9/10           |
-| Heartbleed                                        | Information disclosure from server's memory       | 9/10           |
-| Server-Side JavaScript Injection                  | Execution of arbitrary JavaScript code            | 7/10           |
-| Hibernate SQL Injection                           | Unauthorized data access or manipulation          | 8/10           |
-| Server-Side XML Injection                         | Unauthorized data access, manipulation, or DoS    | 7/10           |
-| CRLF Injection                                    | Injection of special characters in HTTP responses | 6/10           |
-| Entity Expansion (XXE)                            | Unauthorized access, DoS, or SSRF                 | 8/10           |
-| Code Injection in Client-Side Scripts (e.g., JavaScript) | Execution of arbitrary code in client-side scripts | 7/10       |
-| PowerShell Injection                              | Execution of arbitrary PowerShell commands       | 8/10           |
-| Server-Side Redis Injection                       | Unauthorized access, leakage, or DoS in Redis     | 8/10           |
-| Remote File Upload (RFU)                          | Uploading malicious files to the server           | 7/10           |
-| Server-Side Active Server Pages (ASP) Injection   | Execution of arbitrary code in ASP applications  | 8/10           |
-| Expression Language (EL) Injection in Java        | Execution of arbitrary expressions or code        | 7/10           |
-| Path-Based XML Injection                          | Unauthorized data access, manipulation, or DoS    | 6/10           |
-| Java Native Interface (JNI) Injection             | Execution of arbitrary code via JNI               | 9/10           |
-| DLL Injection                                     | Execution of arbitrary code in running processes  | 8/10           |
-| PE Injection                                      | Execution of arbitrary code in PE files           | 7/10           |
-| Hook Injection                                    | Intercepting and modifying system behavior        | 8/10           |
-| APC Injection                                     | Execution of arbitrary code within application process | 7/10      |
-| EWM Injection                                     | Execution of arbitrary code in EWM applications   | 8/10           |
-| Shims                                             | Modifying application behavior using shims        | 6/10           |
-| Process Hollowing                                 | Execution of arbitrary code within a legitimate process | 9/10    |
-| Flex/AMF Injection                                | Execution of arbitrary code in Adobe Flex apps    | 7/10           |
+| Count | Vulnerability                                      | Impact                                            | Severity Score | Example                                                                                             |
+|-------|----------------------------------------------------|---------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------|
+| 1     | SQL Injection (SQLi)                              | Unauthorized data access, manipulation, or leakage | 9/10           | Attacker exploits a vulnerability to execute arbitrary SQL queries, such as retrieving user data.   |
+| 2     | Command Injection                                 | Execution of arbitrary commands on the server     | 8/10           | An attacker injects malicious commands through user input to execute them on the target system.     |
+| 3     | Cross-site Scripting (XSS)                        | Execution of malicious scripts in users' browsers | 7/10           | Attacker injects script code that is executed by victims' browsers, leading to session hijacking.   |
+| 4     | XML Injection (Xinjection or XXE)                  | Unauthorized access, SSRF, or denial of service   | 8/10           | Attacker injects malicious XML content to exploit XML parsing vulnerabilities and retrieve data.     |
+| 5     | LDAP Injection                                    | Unauthorized access, leakage, or denial of service| 7/10           | Attacker manipulates LDAP queries to access unauthorized data or cause a denial of service.         |
+| 6     | OS Command Injection                              | Execution of arbitrary operating system commands | 9/10           | Attacker injects malicious OS commands to execute arbitrary actions on the target system.           |
+| 7     | XPath Injection                                   | Unauthorized data access or manipulation          | 6/10           | Attacker manipulates XPath queries to bypass security controls and access unauthorized data.       |
+| 8     | Template Injection                                | Execution of arbitrary code within templates      | 8/10           | Attacker injects malicious template code to execute arbitrary actions within the application.      |
+| 9     | Code Injection                                    | Execution of arbitrary code within the application| 9/10           | Attacker injects malicious code to be executed by the application, leading to unauthorized actions. |
+| 10    | Expression Language (EL) Injection                | Execution of arbitrary expressions or code        | 7/10           | Attacker injects malicious EL expressions to execute unauthorized actions within the application. |
+| 11    | Object-Relational Mapping (ORM) Injection         | Unauthorized data access, manipulation, or leakage| 8/10           | Attacker exploits vulnerabilities in an ORM framework to manipulate database queries or data.     |
+| 12    | NoSQL Injection                                   | Unauthorized data access, manipulation, or leakage| 7/10           | Attacker exploits vulnerabilities in NoSQL databases to manipulate queries or retrieve data.      |
+| 13    | JavaScript Injection                              | Execution of malicious JavaScript code            | 7/10           | Attacker injects malicious JavaScript code to manipulate client-side functionality or steal data. |
+| 14    | SMTP Injection                                    | Unauthorized email sending or manipulation        | 6/10           | Attacker injects malicious content in email headers or body to manipulate email functionality.    |
+| 15    | Remote Code Execution (RCE)                       | Execution of arbitrary code on the server         | 9/10           | Attacker exploits a vulnerability to execute arbitrary code on the target server.                 |
+| 16    | Server-Side Request Forgery (SSRF)                | Unauthorized requests to internal resources       | 7/10           | Attacker tricks the server into making requests to internal resources on behalf of the server.   |
+| 17    | HTTP Header Injection                             | Injection of arbitrary HTTP headers               | 6/10           | Attacker injects malicious headers to manipulate server behavior or perform attacks.              |
+| 18    | Cross-Site Request Forgery (CSRF) with Injection  | Unauthorized actions through forged requests      | 8/10           | Attacker tricks a user's browser into performing unwanted actions on a trusted website.          |
+| 19    | Cross-Site Flashing (XSF)                         | Injection of malicious Flash content               | 6/10           | Attacker injects malicious Flash content to manipulate user interactions or steal sensitive data. |
+| 20    | Out-of-Band (OOB) Injection                       | Exfiltration or exploitation using out-of-band channels | 7/10      | Attacker injects data that triggers an out-of-band action, such as DNS requests or HTTP callbacks. |
+| 21    | File Inclusion/Path Traversal (e.g., LFI and RFI) | Unauthorized access to local or remote files       | 8/10           | Attacker exploits a vulnerability to access arbitrary files on the server, local or remote.      |
+| 22    | Server-Side Includes (SSI) Injection              | Execution of arbitrary code within SSI directives | 7/10           | Attacker injects malicious code within SSI directives to execute arbitrary actions on the server. |
+| 23    | Shellshock                                        | Remote code execution in Bash shell               | 9/10           | Attacker exploits a vulnerability in Bash to execute arbitrary commands on the target system.    |
+| 24    | Heartbleed                                        | Information leakage in OpenSSL heartbeat           | 8/10           | Attacker exploits a vulnerability to extract sensitive information from the server's memory.    |
+| 25    | Server-Side JavaScript Injection                  | Execution of arbitrary JavaScript on the server   | 7/10           | Attacker injects malicious JavaScript code to execute server-side actions or retrieve data.     |
+| 26    | Hibernate SQL Injection                           | Unauthorized data access or manipulation          | 8/10           | Attacker manipulates Hibernate queries to access unauthorized data or manipulate query results. |
+| 27    | Server-Side XML Injection                         | Unauthorized access, SSRF, or denial of service   | 7/10           | Attacker injects malicious XML content to exploit vulnerabilities and manipulate XML processing. |
+| 28    | CRLF Injection                                    | Manipulation of HTTP responses or headers         | 6/10           | Attacker injects carriage return and line feed characters to manipulate HTTP responses or headers. |
+| 29    | Entity Expansion (XXE)                            | Unauthorized access, SSRF, or denial of service   | 8/10           | Attacker exploits XML parsing to read files, perform SSRF attacks, or cause denial of service. |
+| 30    | Code Injection in Client-Side Scripts (e.g., JavaScript) | Execution of arbitrary code in client-side scripts | 7/10    | Attacker injects malicious code into client-side scripts to execute unauthorized actions.        |
+| 31    | PowerShell Injection                              | Execution of arbitrary PowerShell commands       | 8/10           | Attacker injects malicious PowerShell commands to execute arbitrary actions on the target system. |
+| 32    | Server-Side Redis Injection                       | Unauthorized data access, manipulation, or DoS    | 7/10           | Attacker exploits vulnerabilities to manipulate or extract data from Redis or cause denial of service. |
+| 33    | Remote File Upload (RFU)                          | Uploading malicious files to the server           | 7/10           | Attacker uploads malicious files to the server to execute arbitrary code or compromise the system. |
+| 34    | Server-Side Active Server Pages (ASP) Injection   | Execution of arbitrary code within ASP pages      | 8/10           | Attacker injects malicious code within ASP pages to execute arbitrary actions on the server. |
+| 35    | Expression Language (EL) Injection in Java        | Execution of arbitrary expressions or code        | 7/10           | Attacker injects malicious EL expressions in Java applications to execute unauthorized actions. |
+| 36    | Path-Based XML Injection                          | Unauthorized access or manipulation of XML files  | 7/10           | Attacker manipulates file paths to access or modify XML files and manipulate data or functionality. |
+| 37    | Java Native Interface (JNI) Injection             | Execution of arbitrary native code in Java        | 8/10           | Attacker exploits vulnerabilities to execute arbitrary native code within Java applications. |
+| 38    | DLL Injection                                     | Execution of arbitrary code in Windows processes | 9/10           | Attacker injects malicious DLLs into a process to execute unauthorized actions on Windows systems. |
+| 39    | PE Injection                                      | Execution of arbitrary code in PE files           | 9/10           | Attacker injects malicious code into PE files to execute unauthorized actions on the target system. |
+| 40    | Hook Injection                                    | Modification of system behavior using hooks       | 8/10           | Attacker inserts hooks to intercept and modify system functions or behavior for malicious purposes. |
+| 41    | APC Injection                                     | Execution of arbitrary code using Asynchronous Procedure Calls | 8/10   | Attacker injects malicious code into the address space of a process using APCs to execute unauthorized actions. |
+| 42    | EWM Injection                                     | Unauthorized access, leakage, or denial of service| 8/10           | Attacker exploits vulnerabilities in SAP EWM to gain unauthorized access or cause system disruption. |
+| 43    | Shims                                             | Modification of application behavior              | 6/10           | Attacker modifies the behavior of an application by using shims to perform unauthorized actions. |
+| 44    | Process Hollowing                                 | Execution of malicious code in a legitimate process | 9/10         | Attacker replaces the contents of a legitimate process with malicious code to evade detection. |
+| 45    | Flex/AMF Injection                                | Unauthorized access or manipulation of Flex/AMF data | 7/10         | Attacker manipulates Flex/AMF data to gain unauthorized access or manipulate application behavior. |
 
-Please note that the impact and severity scores mentioned here are subjective and can vary based on specific contexts and configurations. It is important to conduct a thorough risk assessment and implement appropriate security measures based on your application's requirements and environment.
+
+## Please note that the impact and severity scores mentioned here are subjective and can vary based on specific contexts and configurations. It is important to conduct a thorough risk assessment and implement appropriate security measures based on your application's requirements and environment.
