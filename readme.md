@@ -1,4 +1,4 @@
-Here's the updated **Web Vulnerability List** with HTML Injection and some other commonly known vulnerabilities included:
+
 
 # Web Vulnerability List
 
